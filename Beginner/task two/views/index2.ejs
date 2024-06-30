@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration</title>
+</head>
+
+<body>
+    <% if (success===true) { %>
+        <h1>Registration Successful!</h1>
+        <p>Here's the submitted information:</p>
+        <ul>
+            <% if (username) { %>
+                <li>Username: <%= username %>
+                </li>
+                <% } %>
+                    <li>Email: <%= email %>
+                    </li>
+                    <li>Phone Number: <%= phonenum %>
+                    </li>
+        </ul>
+        <% } else if (errors) { %>
+            <h1>Registration Failed</h1>
+            <ul>
+                <% for (const error of errors) { %>
+                    <li>
+                        <%= error.msg %>
+                    </li>
+                    <% } %>
+            </ul>
+            <% } else { %>
+                <% } %>
+
+</body>
+
+</html>

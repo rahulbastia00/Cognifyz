@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Form</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="/submit" id="form" method="post">
+            <h1>Registration</h1>
+            <div class="input-control">
+                <label for="username">Uername</label>
+                <input type="text" id="username" name="username" required>
+                <div class="error"></div>
+            </div>
+            
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input type="email" id="text" name="email" >
+                <div class="error"></div>
+            </div>
+
+            <div class="input-control">
+                <label for="password">Password</label>
+                <input type="text" id="password" name="password">
+                <div class="error"></div>
+            </div>
+
+            <div class="input-control">
+                <label for="password">Password again</label>
+                <input type="text" id="password2" name="password">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="phonenum">Phone Number</label>
+                <input type="tel" id="phonenum" name="phonenum">
+                
+            </div>
+            <div class="input-control">
+                <label for="dob">Date of birth</label>
+                <input type="date" id="dob" name="dob">
+                
+            </div>
+            <button>submit</button>
+        </form>
+    </div>
+    <style>
+        body{
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        }
+        #form {
+            width: 500px;
+            margin: 20vh auto 0 auto;
+            padding: 50px;
+            background-color: whitesmoke;
+            border-radius: 10px;
+            font-size: 17px;
+        }
+        #form h1{
+            color: rgb(41, 57, 194);
+            text-align: center;
+        }
+        #form h1:hover{
+            color: rgb(83, 80, 80);
+        }
+        #form button{
+            padding: 10px;
+            margin-top: 10px;
+            width: 100%;
+            color: white;
+            background-color: rgb(41, 57, 194);
+            border: none;
+            border-radius: 4px;
+        }
+        .input-control {
+            border: 0.5px solid #f0f0f0;
+            flex-direction: column;
+        }
+        .input-control input{
+            border: 2px solid #f0f0f0;
+            border-radius: 4px;
+            display: block;
+            font-size: 12px;
+            padding: 10px;
+            width: 90%;
+        }
+        .input-control input:focus{
+            outline: 0;
+        }
+        .input-control input:focus{
+            border: 2px solid rgb(41, 57, 194);
+        }
+        
+
+        .input-control .error{
+            color: #ff3860;
+            font-size: 15px;
+            height: 13px;
+        }
+    </style>
+    <script src="script.js"></script>
+</body>
+
+</html>
